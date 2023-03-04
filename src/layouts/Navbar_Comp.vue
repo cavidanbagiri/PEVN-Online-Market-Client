@@ -24,11 +24,17 @@
 
             <div class="flex flex-row justify-around ">
                 
+                <!-- Going To Orders -->
+                <div class="flex flex-col">
+                    <span><i class="fa-solid fa-truck fa-md" style="color:white"></i></span>
+                    <span class="text-xs text-gray-100">Orders</span>
+                </div>
+                <!-- Going To Basket -->
                 <div class="flex flex-col">
                     <span><i class="fa-solid fa-cart-shopping fa-md" style="color:white"></i></span>
                     <span class="text-xs text-gray-100">Basket</span>
                 </div>
-
+                <!-- Going To Favorites -->
                 <router-link to="/favorites">
                     <div class="flex flex-col">
                         <span>
@@ -37,7 +43,7 @@
                         <span class="text-xs text-gray-100">Favorites</span>
                     </div>
                 </router-link>
-
+                <!-- Going To Orders -->
                 <div class="flex flex-col">
                     <span>
                         <i class="fa-solid fa-user fa-md" style="color:white"></i>
