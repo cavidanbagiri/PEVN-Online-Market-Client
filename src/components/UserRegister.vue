@@ -12,7 +12,7 @@
             <span>Password</span>
             <input type="text" placeholder="Password" v-model="user_data.password">
             <br>
-            <button @click="register" class="border-2 bg-pink-500">
+            <button @click="userRegister" class="border-2 bg-pink-500">
                 Register
             </button>
         </div>
@@ -22,6 +22,8 @@
 
     
 import { reactive } from 'vue';
+import userStore from '../store/user_store';
+const store = userStore();
 
 const user_data = reactive({
     username : '',
@@ -29,8 +31,8 @@ const user_data = reactive({
     password : '',
 });
 
-const register = () => {
-    console.log('data is : ',user_data);
+const userRegister = () => {
+    store.userRegister(user_data);
 }
 
 </script>

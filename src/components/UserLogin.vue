@@ -10,7 +10,7 @@
         <span>Password</span>
         <input type="text" placeholder="Password" v-model="user_data.password">
         <br>
-        <button @click="signIn" class="border-2 bg-pink-500">
+        <button @click="userLogin" class="border-2 bg-pink-500">
             SignIn
         </button>
     </div>
@@ -28,7 +28,7 @@ const store = userStore();
 
 const user_data = reactive({ email: '', password: '' });
 
-const signIn = () => {
+const userLogin = () => {
     store.userLogin(user_data);
 }
 
