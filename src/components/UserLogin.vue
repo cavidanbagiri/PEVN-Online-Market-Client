@@ -29,7 +29,7 @@ const store = userStore();
 const user_data = reactive({ email: '', password: '' });
 
 const signIn = () => {
-    store.userLogin(user_data.email);
+    store.userLogin(user_data);
 }
 
 

@@ -1,6 +1,8 @@
 
 import { defineStore } from 'pinia';
 
+import axios from 'axios';
+
 const userStore = defineStore('UserStore',{
 
     // Create State
@@ -10,7 +12,6 @@ const userStore = defineStore('UserStore',{
 
     // Create Getters 
     getters: {
-
     },
 
     // Create Actions
@@ -18,6 +19,15 @@ const userStore = defineStore('UserStore',{
         // User Register
         async userLogin (sending_data) {
             console.log('sending data : ',sending_data);
+
+            await axios.post('http://localhost:3000/user').
+            then((respond)=>{
+                console.log('repsond is : ',respond); 
+                this.user_data = respond;
+            }).catch((err)=>{
+                console.log('Axios User Login Error : ', err);
+            })
+
         }
     }
 
