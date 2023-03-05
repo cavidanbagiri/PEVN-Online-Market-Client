@@ -20,9 +20,9 @@ const userStore = defineStore('UserStore',{
         async userLogin (sending_data) {
             console.log('sending data : ',sending_data);
 
-            await axios.post('http://localhost:3000/user').
+            await axios.post('http://localhost:3000/user/login',sending_data).
             then((respond)=>{
-                console.log('repsond is : ',respond); 
+                console.log('repsond is : ',respond);
                 this.user_data = respond;
             }).catch((err)=>{
                 console.log('Axios User Login Error : ', err);
