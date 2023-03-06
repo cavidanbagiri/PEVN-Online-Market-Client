@@ -1,7 +1,7 @@
 
 
 <template>
-    <Teleport to="body">
+    <Teleport to="body" v-if=store.GETUSERTELEPORT>
         <div class="border-2  modal bg-white">
 
             <span class="text-gray-300 mx-5" @click="changeTab(0)" >User Login</span>
@@ -22,15 +22,16 @@
 
     import UserLogin from './UserLogin.vue';
     import UserRegister from './UserRegister.vue';
+    
+    import defaultStore from '../store/index';
+    const store = defaultStore();
 
-    const tabs = shallowRef([
-        UserLogin,UserRegister
-    ])
+    const tabs = shallowRef([ UserLogin, UserRegister ])
     const tab_num = shallowRef(0);
 
-    const changeTab = (text) => {
-        tab_num.value = text
-    }
+    const changeTab = (text) => tab_num.value = text
+
+
 
 </script>
 
