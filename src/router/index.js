@@ -1,10 +1,10 @@
 
 import { createRouter, createWebHistory } from 'vue-router';
 
-const HomePage = () => import('../views/HomeView.vue');
-const ProductItemPage = () => import('../views/ProductItemPage.vue');
-const FavoritesPage = () => import('../views/FavoritesPage.vue');
-const ProductsPage = () => import('../views/ProductsPage.vue');
+const HomePage = () => import('../views/Home_Page.vue');
+const ProductItemPage = () => import('../views/Product_Item_Page.vue');
+const FavoritesPage = () => import('../views/Favorites_Page.vue');
+const ProductsPage = () => import('../views/Products_Page.vue');
 
 const router = createRouter({
 
@@ -13,7 +13,7 @@ const router = createRouter({
     routes:[
         {path:'/', name:'HomePage', component:HomePage},
         {path:'/favorites', name:'FavoritesPage', component:FavoritesPage},
-        {path:'/productitem/:id', name:'ProductItemPage', component:ProductItemPage},
+        {path:'/product/:id', name:'ProductItemPage', component:ProductItemPage},
         {path:'/catalog/:catalog_name', name:'ProductsPage', component:ProductsPage},
     ]    
 
