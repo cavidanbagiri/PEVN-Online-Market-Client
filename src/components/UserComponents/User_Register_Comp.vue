@@ -22,7 +22,7 @@
 
     
 import { reactive } from 'vue';
-import userStore from '../store/user_store';
+import userStore from '../../store/user_store';
 const store = userStore();
 
 const user_data = reactive({

@@ -21,7 +21,7 @@
 import { reactive } from 'vue';
 
 // Import User Store from pinia
-import userStore from '../store/user_store';
+import userStore from '../../store/user_store';
 // Create an instance for using userstore
 const store = userStore();
 

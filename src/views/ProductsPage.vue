@@ -19,7 +19,7 @@
     import { ref, watchEffect, onMounted } from 'vue';
 
     // Import Card Item
-    import CardItem from '../components/CardItem_Comp.vue';        
+    import CardItem from '../components/ProductComponents/CardItem_Comp.vue';        
 
     // Import Store and create an instance
     import productStore from '../store/product_store';

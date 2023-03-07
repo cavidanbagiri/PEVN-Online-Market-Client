@@ -10,7 +10,7 @@
 
 <script setup>
 
-    import defaultStore from '../store';
+    import defaultStore from '../../store';
     const store = defaultStore();
 
     // Open Sign In Teleport

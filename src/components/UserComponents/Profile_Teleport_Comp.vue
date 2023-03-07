@@ -20,13 +20,13 @@
 
     import { ref, shallowRef } from 'vue';
 
-    import UserLogin from './UserLogin.vue';
-    import UserRegister from './UserRegister.vue';
+    import User_Login_Comp from '../UserComponents/User_Login_Comp.vue';
+    import User_Register_Comp from '../UserComponents/User_Register_Comp.vue';
     
-    import defaultStore from '../store/index';
+    import defaultStore from '../../store/index';
     const store = defaultStore();
 
-    const tabs = shallowRef([ UserLogin, UserRegister ])
+    const tabs = shallowRef([ User_Login_Comp, User_Register_Comp ])
     const tab_num = shallowRef(0);
 
     const changeTab = (text) => tab_num.value = text

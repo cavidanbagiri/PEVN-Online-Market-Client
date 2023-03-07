@@ -7,7 +7,7 @@
   
     <router-view></router-view>
     
-    <ProfileTeleport></ProfileTeleport>
+    <Profile_Teleport_Comp></Profile_Teleport_Comp>
 
   </div>
 
@@ -20,6 +20,6 @@
   import Navbar_Comp from './layouts/Navbar_Comp.vue';
 
   // Import Teleport
-  import ProfileTeleport from './components/ProfileTeleport.vue';
+  import Profile_Teleport_Comp from './components/UserComponents/Profile_Teleport_Comp.vue';
 
 </script>

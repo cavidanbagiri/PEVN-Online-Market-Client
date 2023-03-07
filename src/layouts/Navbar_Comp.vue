@@ -55,8 +55,8 @@
 
         </div>
 
-        <Profile_Dropdown></Profile_Dropdown>
-        <CatalogCanvas></CatalogCanvas>
+        <Profile_Dropdown_Comp></Profile_Dropdown_Comp>
+        <Catalog_Canvas_Comp></Catalog_Canvas_Comp>
     </div>
 
 
@@ -64,8 +64,8 @@
 
 <script setup>
 
-import Profile_Dropdown from '../components/Profile_Dropdown.vue';
-import CatalogCanvas from '../components/CatalogCanvas.vue';
+import Profile_Dropdown_Comp from '../components/DesignComponents/Profile_Dropdown_Comp.vue';
+import Catalog_Canvas_Comp from '../components/DesignComponents/Catalog_Canvas_Comp.vue';
 
 </script>
 

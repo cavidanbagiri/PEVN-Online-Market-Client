@@ -6,7 +6,7 @@
         <ul class="flex flex-wrap h-20 justify-between m-0 p-0 overflow-hidden">
 
             <li v-for="i in brands_logos">
-                <BrandsItem :logo="i" ></BrandsItem>
+                <Brands_Item_Comp :logo="i" ></Brands_Item_Comp>
             </li>            
 
         </ul>
@@ -16,7 +16,7 @@
 
 <script setup>
 
-import BrandsItem from './Brands_Item.vue';
+import Brands_Item_Comp from './Brands_Item_Comp.vue';
 
 
 

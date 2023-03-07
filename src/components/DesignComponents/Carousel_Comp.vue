@@ -5,7 +5,7 @@
 
         <div class="absolute flex flex-row justify-between items-center ">
           
-            <img class="left-0 h-96 rounded-3xl" src="../assets/carousel/carsecond.jpg" alt="">
+            <img class="left-0 h-96 rounded-3xl" src="../../assets/carousel/carsecond.jpg" alt="">
 
             <button class="absolute left-0 bg-slate-200 mx-5 w-10 h-10 rounded-full hover:bg-white" >
               <i class="fa-solid fa-arrow-left fa-lg"></i>
