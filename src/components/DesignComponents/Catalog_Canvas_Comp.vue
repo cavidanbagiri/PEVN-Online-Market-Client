@@ -1,7 +1,7 @@
 
 <template>
 
-    <div v-if="true" class=" bg-white border-2 absolute left-0 top-10 z-10">
+    <div v-if="false" class=" bg-white border-2 absolute left-0 top-10 z-10">
         
         <ul class="">
             <li class="text-blackm-3 my-3 flex text-left" v-for="i in catalog_list">
