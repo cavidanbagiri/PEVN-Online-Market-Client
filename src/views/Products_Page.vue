@@ -36,16 +36,13 @@
     const products = ref([]);
 
     onMounted(async ()=>{
-        await store.GETPRODUCTS(catalog_name);
+        await store.GETCATALOGPRODUCTS(catalog_name);
     })
 
     watchEffect(async () => {
-        products.value = store.GETPRODUCTDATA;
+        products.value = store.GETCATALOGDATA;
     })
 
-    // const getDatas = (catalog_name) => {
-    //     store.GETPRODUCTS(catalog_name);
-    // }
 
 </script>
 

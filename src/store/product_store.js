@@ -6,31 +6,45 @@ const productStore = defineStore('productStore',{
 
     // States
     state: () => ({
-        product_data : {
+        catalog_data : {
             'name':'cavidan'
+        },
+        product_data:{
+            'product' : 'temp product'
         }
     }),
 
     // Getters
     getters: {
         // Get Product Data
-        GETPRODUCTDATA: (state) => state.product_data ,
+        GETCATALOGDATA: (state) => state.catalog_data ,
+        GETPRODUCTDATA: (state) => state.product_data
     },
 
     // Actions
     actions:{
-        async GETPRODUCTS(catalog_name) {
+        // Get Product According To Catalog Name
+        async GETCATALOGPRODUCTS(catalog_name) {
 
             axios.get(`http://localhost:3000/catalog/${catalog_name}`).
             then((respond)=>{
-                this.product_data = respond.data;
-                console.log(this.product_data);
+                this.catalog_data = respond.data;
             }).
             catch((err)=>{
                 console.log('Get Product Error : ',err);
             })
+        },
 
+        // Get Product With Id
+        async GETPRODUCTWITHID(product_id) {
+            axios.get(`http://localhost:3000/product/${product_id}`).
+            then((respond)=>{
+                this.product_data = respond.data;
+            }).catch((err)=>{
+                console.log('find product by id error : ',err);
+            })
         }
+
     }
 
 });
