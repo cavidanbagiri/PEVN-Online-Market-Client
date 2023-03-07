@@ -2,14 +2,13 @@
 
 <template>
     <div>
-        <p>Product Item</p>    
+        <p>Product Item</p>  
     </div>
 </template>
 
 <script setup>
 
-        
-
+    
 </script>
 
 

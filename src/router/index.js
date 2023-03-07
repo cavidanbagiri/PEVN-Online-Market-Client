@@ -13,7 +13,7 @@ const router = createRouter({
     routes:[
         {path:'/', name:'HomePage', component:HomePage},
         {path:'/favorites', name:'FavoritesPage', component:FavoritesPage},
-        {path:'/productitem', name:'ProductItemPage', component:ProductItemPage},
+        {path:'/productitem/:id', name:'ProductItemPage', component:ProductItemPage},
         {path:'/catalog/:catalog_name', name:'ProductsPage', component:ProductsPage},
     ]    
 

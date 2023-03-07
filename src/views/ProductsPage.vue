@@ -1,18 +1,25 @@
 
 <template>
-    <div>
+    <div class="flex flex-wrap">
         <p>Products Page</p>
         <br>
         <br>
         <br>
         <br>
-        <pre>{{ products }}</pre>
+          
+        <div v-for="i in products">
+            <CardItem :product = i></CardItem>
+        </div>
+        
     </div>
 </template>
 
 <script setup>
 
     import { ref, watchEffect, onMounted } from 'vue';
+
+    // Import Card Item
+    import CardItem from '../components/CardItem_Comp.vue';        
 
     // Import Store and create an instance
     import productStore from '../store/product_store';
