@@ -25,7 +25,6 @@ const productStore = defineStore('productStore',{
     actions:{
         // Get Product According To Catalog Name
         async GETCATALOGPRODUCTS(catalog_name) {
-
             axios.get(`http://localhost:3000/catalog/${catalog_name}`).
             then((respond)=>{
                 this.catalog_data = respond.data;
@@ -43,7 +42,30 @@ const productStore = defineStore('productStore',{
             }).catch((err)=>{
                 console.log('find product by id error : ',err);
             })
+        },
+
+        // Product To Basket
+        async ADDBASKET(product_id) {
+            axios.post(`http://localhost:3000/product/addbasket/${product_id}`).
+            then((respond)=>{
+                console.log('Added Basket ',respond);
+            })
+            .catch((err)=>{
+                console.log('Not Added To Basket');
+            });
+        },
+
+        // Product To Favorites
+        async ADDFAVORITES(product_id) {
+            axios.post(`http://localhost:3000/product/addfavorites/${product_id}`).
+            then((respond)=>{
+                console.log('Added Favorites ',respond);
+            })
+            .catch((err)=>{
+                console.log('Not Added To Favorites');
+            });
         }
+
 
     }
 
