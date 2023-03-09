@@ -5,7 +5,7 @@
 
         <!-- Name Of Website And Catalog -->
         <div class="col-span-2  p-2 flex items-center justify-around">
-            <span><i class="fa-solid fa-bars fa-xl" style="color:white"></i></span>
+            <span @click="toggleCanvas" class="cursor-pointer"><i class="fa-solid fa-bars fa-xl" style="color:white"></i></span>
             <router-link to="/">
                 <p class=" text-3xl font-bold text-white" style="font-family: cursive;">
                     Beniz
@@ -44,7 +44,7 @@
                     </div>
                 </router-link>
                 <!-- Going To User Profile -->
-                <div class="flex flex-col">
+                <div @click="toggleUserDropdown" class="flex flex-col cursor-pointer">
                     <span>
                         <i class="fa-solid fa-user fa-md" style="color:white"></i>
                     </span>
@@ -55,8 +55,8 @@
 
         </div>
 
-        <Profile_Dropdown_Comp></Profile_Dropdown_Comp>
-        <Catalog_Canvas_Comp></Catalog_Canvas_Comp>
+        <Profile_Dropdown_Comp v-if=store.GETUSERDROPDOWN></Profile_Dropdown_Comp>
+        <Catalog_Canvas_Comp v-if=store.GETCANVASTOGGLE ></Catalog_Canvas_Comp>
     </div>
 
 
@@ -64,8 +64,17 @@
 
 <script setup>
 
+import defaultStore from '../store/index.js';
+
+
 import Profile_Dropdown_Comp from '../components/DesignComponents/Profile_Dropdown_Comp.vue';
 import Catalog_Canvas_Comp from '../components/DesignComponents/Catalog_Canvas_Comp.vue';
+
+const store = defaultStore();
+
+const toggleCanvas = () => store.TOGGLECANVAS();
+const toggleUserDropdown = () => store.TOGGLEUSERDROPDOWN();
+
 
 </script>
 

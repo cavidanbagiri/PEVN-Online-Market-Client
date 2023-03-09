@@ -1,9 +1,9 @@
 
 <template lang="">
-    <div class="w-36 h-20 border-2 absolute -bottom-10 right-0">
+    <div class="w-36 h-20 border-2 absolute top-10 right-0 bg-white text-black z-10 text-start p-2">
         <ul>
-            <li @click='toggleUserTeleport'>Sign In</li>
-            <li @click='toggleUserTeleport'>Register</li>
+            <li class="my-2" @click='toggleUserTeleport'>Sign In</li>
+            <li class="my-2" @click='toggleUserTeleport'>Register</li>
         </ul>
     </div>
 </template>
