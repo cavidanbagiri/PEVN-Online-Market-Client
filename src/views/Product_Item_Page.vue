@@ -2,7 +2,16 @@
 
 <template>
     <div>
-        <p>Product Item {{ productData }}</p>  
+        <pre>{{ productData }}</pre>
+
+        <p>-----------------------</p>
+        <p>comments</p>
+
+        <pre>
+            {{ productData?.username }}
+            {{ productData?.comment_text }}
+        </pre>
+
     </div>
 </template>
 
