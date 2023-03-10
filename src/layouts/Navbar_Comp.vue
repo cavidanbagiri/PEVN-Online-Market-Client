@@ -1,7 +1,7 @@
 
 <template lang="">
 
-    <div class="grid grid-cols-12 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-center shadow-md relative">
+    <div class="grid grid-cols-12 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-center shadow-md ">
 
         <!-- Name Of Website And Catalog -->
         <div class="col-span-2  p-2 flex items-center justify-around">
@@ -55,7 +55,7 @@
 
         </div>
 
-        <Profile_Dropdown_Comp v-if=store.GETUSERDROPDOWN></Profile_Dropdown_Comp>
+        <!-- <Profile_Dropdown_Comp v-if=store.GETUSERDROPDOWN></Profile_Dropdown_Comp> -->
         <Catalog_Canvas_Comp v-if=store.GETCANVASTOGGLE ></Catalog_Canvas_Comp>
     </div>
 

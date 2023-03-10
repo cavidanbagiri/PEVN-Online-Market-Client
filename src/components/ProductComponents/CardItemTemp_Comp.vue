@@ -11,12 +11,16 @@
             </li>
         </ul>
         
-        <p class="font-bold my-2 text-md">75833 ₽  <span class="text-sm text-gray-400">83900</span> </p>
+        <p class="font-bold my-2 text-md">{{ prop?.product?.price }} ₽  <span class="text-sm text-gray-400">83900</span> </p>
 
         <p class="font-bold text-sm text-gray-500">Dell Vostro 15 3000 Ram 8GB SSD-1TB</p>
 
-        <button class="border-2 bg-pink-600 text-white text-sm font-bold p-2 rounded-md my-2">
+        <button @click="addBasket" class="border-2 bg-pink-600 text-white text-sm font-bold p-2 rounded-md my-2">
             Add Basket
+        </button>
+
+        <button @click="addFavorites" class="border-2 bg-pink-600 text-white text-sm font-bold p-2 rounded-md my-2">
+            Add Favorites
         </button>
 
     </div>
@@ -24,6 +28,15 @@
 
 <script setup>
 
+
+import productStore from '../../store/product_store';
+
+const store = productStore();
+
+const prop = defineProps(['product']);
+
+const addBasket = () => store.ADDBASKET(prop.product.id);
+const addFavorites = () => store.ADDFAVORITES(prop.product.id);
 
 
 </script>

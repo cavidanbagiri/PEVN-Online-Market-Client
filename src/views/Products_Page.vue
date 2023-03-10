@@ -3,7 +3,7 @@
     <div class="flex flex-wrap justify-center">
           
         <!-- <div v-for="i in products">
-            <CardItem :product = i></CardItem>
+            <CardİtemTemp_Comp :product = i></CardİtemTemp_Comp>
         </div> -->
 
         <div v-for="i in 20">
@@ -20,7 +20,8 @@
     // Import Card Item
     import CardItem from '../components/ProductComponents/CardItem_Comp.vue';        
 
-    import CardİtemTemp_Comp from '../components/ProductComponents/CardİtemTemp_Comp.vue';
+    // import CardİtemTemp_Comp from '../components/ProductComponents/CardİtemTemp_Comp.vue';
+    import CardİtemTemp_Comp from '../components/ProductComponents/CardItemTemp_Comp.vue';
 
     // Import Store and create an instance
     import productStore from '../store/product_store';
