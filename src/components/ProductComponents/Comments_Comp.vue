@@ -5,7 +5,7 @@
         
         <ul class="mb-10">
             <li v-for="i in prop.comments">
-                {{ i.user }} : {{ i.comment }}
+                {{ i.user }} : {{ i.comment }} : {{ i.raiting }}
             </li>
         </ul>
 
