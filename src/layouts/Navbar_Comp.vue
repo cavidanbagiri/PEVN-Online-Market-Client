@@ -56,7 +56,7 @@
         </div>
 
         <!-- <Profile_Dropdown_Comp v-if=store.GETUSERDROPDOWN></Profile_Dropdown_Comp> -->
-        <Catalog_Canvas_Comp v-if=store.GETCANVASTOGGLE ></Catalog_Canvas_Comp>
+        <!-- <Catalog_Canvas_Comp v-if=store.GETCANVASTOGGLE ></Catalog_Canvas_Comp> -->
     </div>
 
 

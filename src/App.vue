@@ -6,6 +6,8 @@
 
     <Profile_Dropdown_Comp v-if=store.GETUSERDROPDOWN />
 
+    <Catalog_Canvas_Comp v-if=store.GETCANVASTOGGLE />
+
     <router-view></router-view>
 
     <Profile_Teleport_Comp></Profile_Teleport_Comp>
@@ -25,6 +27,7 @@ import Profile_Teleport_Comp from './components/UserComponents/Profile_Teleport_
 
 // Import Dropdown
 import Profile_Dropdown_Comp from './components/DesignComponents/Profile_Dropdown_Comp.vue';
+import Catalog_Canvas_Comp from './components/DesignComponents/Catalog_Canvas_Comp.vue';
 
 const store = defaultStore();
 
