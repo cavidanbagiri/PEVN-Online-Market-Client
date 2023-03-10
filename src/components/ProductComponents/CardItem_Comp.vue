@@ -1,13 +1,13 @@
 
 <template>
-    <router-link :to="{name:'ProductItemPage', params:{id:`${prop.product.id}`}}">
-        <div class="w-44 h-64 bg-white border-2" >
+    <router-link :to="{ name: 'ProductItemPage', params: { id: `${prop.product.id}` } }">
+        <div class="w-44 h-64 bg-white border-2">
             {{ prop.product.id }}
             <span>Brand : {{ prop.product.brand }}</span>
             <br>
             <span>Model : {{ prop.product.model }}</span>
             <br>
-            
+
         </div>
     </router-link>
     <button class="border-2 bg-black text-white" @click="addBasket">
@@ -20,14 +20,14 @@
 
 <script setup>
 
-    import productStore from '../../store/product_store';
+import productStore from '../../store/product_store';
 
-    const store = productStore();
+const store = productStore();
 
-    const prop = defineProps(['product']);
+const prop = defineProps(['product']);
 
-    const addBasket = () => store.ADDBASKET(prop.product.id);
-    const addFavorites = () => store.ADDFAVORITES(prop.product.id);
+const addBasket = () => store.ADDBASKET(prop.product.id);
+const addFavorites = () => store.ADDFAVORITES(prop.product.id);
 
 </script>
 

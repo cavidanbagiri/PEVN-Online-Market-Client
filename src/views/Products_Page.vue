@@ -1,16 +1,15 @@
 
 <template>
-    <div class="flex flex-wrap">
-        <p>Products Page</p>
-        <br>
-        <br>
-        <br>
-        <br>
+    <div class="flex flex-wrap justify-center">
           
-        <div v-for="i in products">
+        <!-- <div v-for="i in products">
             <CardItem :product = i></CardItem>
+        </div> -->
+
+        <div v-for="i in 20">
+            <CardİtemTemp_Comp/>
         </div>
-        
+
     </div>
 </template>
 
@@ -20,6 +19,8 @@
 
     // Import Card Item
     import CardItem from '../components/ProductComponents/CardItem_Comp.vue';        
+
+    import CardİtemTemp_Comp from '../components/ProductComponents/CardİtemTemp_Comp.vue';
 
     // Import Store and create an instance
     import productStore from '../store/product_store';
