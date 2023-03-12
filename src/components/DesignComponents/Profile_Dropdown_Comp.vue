@@ -16,7 +16,7 @@
 
     </div> -->
 
-    <div  class="fixed right-0 bg-white px-3 py-3 shadow-lg z-10 rounded-xl">
+    <div  class="fixed right-0 bg-white px-3 py-3 shadow-lg z-10 rounded-xl user-drop-down">
         <ul class="p-1">
             <li class="flex items-center mt-1 border border-orange-300 px-3 py-1 rounded-lg">
                 <!-- <img src="https://avatars.mds.yandex.net/get-yapic/0/0-0/islands-retina-50"
@@ -97,12 +97,30 @@
 
 <script setup>
 
-    import defaultStore from '../../store';
-    const store = defaultStore();
+import defaultStore from '../../store';
+const store = defaultStore();
 
-    // Open Sign In Teleport
-    const toggleUserTeleport = () => {
-        store.TOGGLEUSERTELEPORT();
-    }
+// Open Sign In Teleport
+const toggleUserTeleport = () => {
+    store.TOGGLEUSERTELEPORT();
+}
 
 </script>
+
+
+<style scoped>
+
+.user-drop-down{
+    animation: openslide 0.5s
+}
+
+@keyframes openslide {
+    from {
+        transform: translateY(-500px);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+</style>

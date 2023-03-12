@@ -6,9 +6,10 @@
 
     <Profile_Dropdown_Comp v-if=store.GETUSERDROPDOWN />
 
-    <Catalog_Canvas_Comp v-if=store.GETCANVASTOGGLE />
+    <!-- <Catalog_Canvas_Comp v-if=store.GETCANVASTOGGLE /> -->
+    <Catalog_Canvas_Comp />
 
-    <router-view></router-view>
+    <!-- <router-view></router-view> -->
 
     <Profile_Teleport_Comp></Profile_Teleport_Comp>
 
