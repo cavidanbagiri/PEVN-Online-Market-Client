@@ -4,6 +4,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 const HomePage = () => import('../views/Home_Page.vue');
 const ProductItemPage = () => import('../views/Product_Item_Page.vue');
 const FavoritesPage = () => import('../views/Favorites_Page.vue');
+const BasketPage = () => import('../views/Basket_Page.vue');
 const ProductsPage = () => import('../views/Products_Page.vue');
 
 const router = createRouter({
@@ -13,6 +14,7 @@ const router = createRouter({
     routes:[
         {path:'/', name:'HomePage', component:HomePage},
         {path:'/favorites', name:'FavoritesPage', component:FavoritesPage},
+        {path:'/basket', name:'BasketPage', component:BasketPage},
         {path:'/product/:id', name:'ProductItemPage', component:ProductItemPage},
         {path:'/catalog/:catalog_name', name:'ProductsPage', component:ProductsPage},
     ]    

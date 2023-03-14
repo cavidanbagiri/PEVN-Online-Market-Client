@@ -30,12 +30,14 @@
                     <span class="text-xs text-gray-100">Orders</span>
                 </div>
                 <!-- Going To Basket -->
-                <div class="flex flex-col">
-                    <span><i class="fa-solid fa-cart-shopping fa-md" style="color:white"></i></span>
-                    <span class="text-xs text-gray-100">Basket</span>
-                </div>
+                <router-link to='/basket'>
+                    <div class="flex flex-col">
+                        <span><i class="fa-solid fa-cart-shopping fa-md" style="color:white"></i></span>
+                        <span class="text-xs text-gray-100">Basket</span>
+                    </div>
+                </router-link>
                 <!-- Going To Favorites -->
-                <router-link to="/favorites">
+                <router-link to='/favorites'>
                     <div class="flex flex-col">
                         <span>
                             <i class="fa-solid fa-heart fa-md" style="color:white"></i>

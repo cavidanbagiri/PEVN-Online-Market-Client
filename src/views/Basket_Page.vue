@@ -3,7 +3,7 @@
 <template>
     <div class=" p-3">
 
-        <p class="text-5xl my-2 text-gray-400">Favorites</p>
+        <p class="text-5xl my-2 text-gray-400">Basket</p>
 
         <div class="flex flex-row justify-between p-2">
 
